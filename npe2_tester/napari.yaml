@@ -1,0 +1,21 @@
+name: my_plugin
+license: BSD-3-Clause
+entry_point: npe2_tester._activate
+contributes:
+  commands:
+    - command: my_plugin.hello_world
+      title: Hello World
+    - command: my_plugin.another_command
+      title: Another Command
+  keybindings:
+    - command: my_plugin.hello_world
+      key: ctrl+f1
+  menus:
+    test_menu:
+      - submenu: mysubmenu
+      - command: my_plugin.hello_world
+    mysubmenu:
+      - command: my_plugin.another_command
+  submenus:
+    - id: mysubmenu
+      label: My SubMenu
