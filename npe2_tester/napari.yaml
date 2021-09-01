@@ -1,5 +1,6 @@
 name: my_plugin
 publisher: pub
+display_name: My Plugin
 license: BSD-3-Clause
 entry_point: npe2_tester._activate
 contributes:
@@ -8,11 +9,19 @@ contributes:
       title: Hello World
     - command: my_plugin.another_command
       title: Another Command
-    - command: my_plugin.my_reader
-      title: My Reader
+    - command: my_plugin.tiff_reader
+      title: My Tiff Reader
+  configuration:
+    title: My Plugin
+    properties:
+      my_plugin.reader.lazy:
+        type: boolean
+        default: false
+        title: Load lazily
+        description: Whether to load images lazily with dask
   readers:
-    - command: my_plugin.my_reader
-      filename_patterns: ['*.tif', '*.tiff']
+    - command: my_plugin.tiff_reader
+      filename_patterns: ["*.tif", "*.tiff"]
   keybindings:
     - command: my_plugin.hello_world
       key: ctrl+f1
@@ -40,4 +49,3 @@ contributes:
         text: "#a1ef34"
         warning: "#f92672"
         current: "#66d9ef"
-  
