@@ -2,7 +2,7 @@ name: my_plugin
 publisher: pub
 display_name: My Plugin
 license: BSD-3-Clause
-entry_point: npe2_tester._activate
+entry_point: npe2_tester
 contributes:
   commands:
     - command: my_plugin.hello_world
@@ -11,6 +11,7 @@ contributes:
       title: Another Command
     - command: my_plugin.tiff_reader
       title: My Tiff Reader
+      python_name: npe2_tester.get_reader
   configuration:
     title: My Plugin
     properties:
@@ -22,6 +23,7 @@ contributes:
   readers:
     - command: my_plugin.tiff_reader
       filename_patterns: ["*.tif", "*.tiff"]
+      accepts_directories: false
   keybindings:
     - command: my_plugin.hello_world
       key: ctrl+f1
