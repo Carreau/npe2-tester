@@ -4,6 +4,7 @@ except ImportError:
     __version__ = "unknown"
 
 
+# register command -> python_name only?
 def activate(context):
     from npe2 import register_command
 
