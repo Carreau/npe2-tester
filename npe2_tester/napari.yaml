@@ -7,17 +7,17 @@ contributes:
   # perhaps we exclude "my_plugin" and do the prefixing ourself
   # or just enforce on validation (probably this)
   commands:
-    - command: my_plugin.hello_world
+    - id: my_plugin.hello_world
       title: Hello World
-    - command: my_plugin.another_command
+    - id: my_plugin.another_command
       title: Another Command
-    - command: my_plugin.tiff_reader
+    - id: my_plugin.tiff_reader
       title: My Tiff Reader
       python_name: npe2_tester:get_reader
-    - command: id...
+    - id: my_plugin.id
       title: "Image to Labels"
       enablement: 'active_layer_type == "image"'
-    - command: my_plugin.affinder
+    - id: my_plugin.affinder
       title: Affinder
       python_name: npe2_tester.module.sub.sub:Affinder
       # why do we both a command id and python_name?
