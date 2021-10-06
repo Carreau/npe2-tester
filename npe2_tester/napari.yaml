@@ -3,7 +3,7 @@ publisher: pub
 display_name: My Plugin
 license: BSD-3-Clause
 entry_point: npe2_tester
-contributes:
+contributions:
   # perhaps we exclude "my_plugin" and do the prefixing ourself
   # or just enforce on validation (probably this)
   commands:
